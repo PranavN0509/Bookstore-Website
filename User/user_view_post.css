@@ -1,0 +1,334 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --gradient :linear-gradient(90deg, #f1c40f, #f39c12);
+    --main-color:#ffa81c;
+    --red:#e74c3c;
+    --orange:#f39c12;
+    --light-color:#888;
+    --light-bg:#eee;
+    --black:#2c3e50;
+    --white:#fff;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color:#fff;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+   width: 1.5rem;
+   height: .5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+   background: var(--gradient);
+}
+
+/* 
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:linear-gradient(#f1c40f, #f39c12);
+} */
+
+body{
+   background-color: var(--light-bg);
+   /* padding-left: 30rem; */
+}
+
+body.dark{
+   --light-color:#aaa;
+   --light-bg:#333;
+   --black:#fff;
+   --white:#252525;
+   --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active{
+   padding-left: 0rem;
+}
+
+section{
+   min-width: 100%;
+}
+
+.heading{
+   font-size: 2.1rem;
+   color:var(--black);
+   margin-bottom: 2.5rem;
+   border-bottom: var(--border);
+   padding-bottom: 1.5rem;
+   text-transform: capitalize;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn{
+   border-radius: .5rem;
+   color:#fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   /* width: 100%; */
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color:var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+}
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.view-post{
+   padding: 2rem;
+}
+
+.view-post .heading{
+   display:  flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+
+}
+
+.view-post .row{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 1rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   background-color: var(--white);
+   padding: 2rem 10rem;
+   border-radius: 2rem;
+}
+
+.view-post .row .col{
+   flex-direction: column;
+}
+
+.view-post .row .col .image{
+   width: 15rem;
+   height: 20rem;
+   border-radius: .5rem;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+}
+
+.view-post .row .col .title{
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.view-post .row .col{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.view-post .row .col .total-reviews{
+   
+   text-align: center;
+}
+
+.view-post .row .col .total-reviews h3{
+   font-size: 7rem;
+   color: var(--black);
+}
+
+.view-post .row .col .total-reviews i{
+   font-size: 3rem;
+}
+
+.view-post .row .col .total-reviews p{
+   font-size: 1.8rem;
+   color: var(--light-color);
+   padding-top: 1rem;
+}
+
+
+.view-post .row .col .total-ratings{
+   font-size: 2rem;
+}
+
+.view-post .row .col .total-ratings p{
+   padding: .3rem 0;
+}
+
+.view-post .row .col .total-ratings p i{
+   color: var(--orange);
+}
+
+.view-post .row .col .total-ratings p span{
+   color: var(--light-color);
+}
+
+.reviews-container{
+   padding: 2rem;
+}
+.reviews-container .box-container{
+   display: grid;
+   row-gap: 3rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   border-radius: .5rem;
+   padding: 2rem;
+}
+
+.reviews-container .box-container .box{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   border-bottom: var(--border);
+   overflow-x: hidden;
+   padding-bottom: 1.5rem;
+   position: relative;
+}
+
+.reviews-container .box-container .box .user{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.reviews-container .box-container .box .user .flex{
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+
+.reviews-container .box-container .box .user img{
+   height: 6rem;
+   width: 6rem;
+   border-radius: 1rem;
+   object-fit: cover;
+}
+
+.reviews-container .box-container .box .user h3{
+   font-size: 2.5rem;
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   background-color: var(--light-bg);
+   text-transform: uppercase;
+   text-align: center;
+   line-height: 6.5rem;   
+}
+
+.reviews-container .box-container .box .user p{
+   font-size: 1.8rem;
+   color: var(--black);
+   text-overflow: ellipsis;
+   overflow-x: hidden;
+   padding-bottom: .3rem;
+}
+
+.reviews-container .box-container .box .user span{
+   color: var(--light-color);
+   font-size: 1.5rem;
+}
+
+.reviews-container .box-container .box .ratings{
+   position: absolute;
+   top: 0; right: 0;
+   z-index: 10;
+}
+
+.reviews-container .box-container .box .ratings p{
+   border-radius: .5rem;
+   color: var(--white);
+   padding: .5rem 1rem;
+}
+
+.reviews-container .box-container .box .ratings p span{
+   font-size: 2rem;
+}
+
+.reviews-container .box-container .box .ratings p i{
+   font-size: 1.5rem;
+}
+
+.reviews-container .box-container .box .user .title{
+   font-size: 2rem;
+   color: var(--black);
+   padding: .5rem 0;
+}
+
+.reviews-container .box-container .box .user .description{
+   font-size: 1.6rem;
+   white-space: pre-line;
+   color: var(--light-color);
+   line-height: 1.5;
+}
+

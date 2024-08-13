@@ -1,0 +1,241 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --gradient :linear-gradient(90deg, #f1c40f, #f39c12);
+    --main-color:#ffa81c;
+    --red:#e74c3c;
+    --orange:#f39c12;
+    --light-color:#888;
+    --light-bg:#eee;
+    --black:#2c3e50;
+    --white:#fff;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color:#fff;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+   width: 1.5rem;
+   height: .5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+   background: var(--gradient);
+}
+
+/* 
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:linear-gradient(#f1c40f, #f39c12);
+} */
+
+body{
+   background-color: var(--light-bg);
+   /* padding-left: 30rem; */
+}
+
+body.dark{
+   --light-color:#aaa;
+   --light-bg:#333;
+   --black:#fff;
+   --white:#252525;
+   --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active{
+   padding-left: 0rem;
+}
+
+section{
+   min-width: 100%;
+}
+
+.heading{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2.5rem;
+   border-bottom: var(--border);
+   padding-bottom: 1.5rem;
+   text-transform: capitalize;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn{
+   border-radius: .5rem;
+   color:#fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   /* width: 100%; */
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color:var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+}
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.Home{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.Home .bookslider{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.Home .bookslider .images{
+      height: 100%;
+      width: 100%;
+}
+
+.Home .bookslider .images img{
+    height: 100%;
+    width: 100%;
+}
+
+.Home .bookslider .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid white;
+    cursor: pointer;
+    background: rgba(255, 255,255, 0.1);
+}
+
+.Home .bookslider .right{
+    right: 0;
+}
+
+.Home .bookslider .slide span{
+    font-size: 3rem;
+    color: white;
+    line-height: 4rem;
+    margin: 0 3px;
+}
+
+.Home .bookslider .butn-sliders{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Home .bookslider .butn-sliders span{
+    display: inline-block;
+    height: 1rem;
+    width: 4rem;
+    border: 2px solid white;
+    background: white;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.Home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-width: 100%;
+    height: 80vh;
+    background: url(../Images/UserHomebg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Home .content h2{
+    color: white;
+    font-size: 5rem;
+    text-shadow: 1px 1px black;
+}
+.Home .content p{
+    width: 80%;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 1px 1px black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.Home .content a{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: aliceblue;
+    text-align: center;
+    border: 3px ridge black;
+    border-radius: 2rem;
+    padding: .7rem;
+}

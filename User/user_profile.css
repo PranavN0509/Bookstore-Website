@@ -1,0 +1,235 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --gradient :linear-gradient(90deg, #f1c40f, #f39c12);
+    --main-color:#ffa81c;
+    --red:#e74c3c;
+    --orange:#f39c12;
+    --light-color:#888;
+    --light-bg:#eee;
+    --black:#2c3e50;
+    --white:#fff;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color:#fff;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+   width: 1.5rem;
+   height: .5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+   background: var(--gradient);
+}
+
+/* 
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:linear-gradient(#f1c40f, #f39c12);
+} */
+
+body{
+   background-color: var(--light-bg);
+   /* padding-left: 30rem; */
+}
+
+body.dark{
+   --light-color:#aaa;
+   --light-bg:#333;
+   --black:#fff;
+   --white:#252525;
+   --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active{
+   padding-left: 25rem;
+}
+
+section{
+   min-width: 100%;
+}
+
+.heading{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2.5rem;
+   border-bottom: var(--border);
+   padding-bottom: 1.5rem;
+   text-transform: capitalize;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn{
+   border-radius: .5rem;
+   color:#fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   /* width: 100%; */
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color:var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+}
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.profile{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--white);
+   padding: 2rem;
+}
+
+.profile .details{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 3rem;
+   background-color: var(--white);
+   border: 2px solid var(--black);
+   border-radius: 1rem;
+   padding: 2rem;
+}
+
+.profile .details .user{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: .5rem;
+}
+
+.profile .details .user img{
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.profile .details .user h3{
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.profile .details .user p{
+   font-size: 1.7rem;
+   color: var(--light-color);
+}
+
+.profile .details .box-container{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 3rem;
+}
+
+.profile .details .box-container .box{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--light-bg);
+   width: 20rem;
+   height: 18rem;
+   border-radius: 1rem;
+   padding: 2rem;
+   flex: 1 1 30rem;
+}
+
+
+.profile .details .box-container .box i{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 4.5rem;
+   width: 4.5rem;
+   border-radius: 1rem;
+   background-color: var(--black);
+   font-size: 2rem;
+   color: var(--white);
+}
+
+.profile .details .box-container .box h3{
+   font-size: 2rem;
+   color: var(--main-color);
+   margin-bottom: .2rem;
+}
+
+.profile .details .box-container .box span{
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.profile .details .box-container .box .btn{
+   padding: .6rem 4rem;
+}

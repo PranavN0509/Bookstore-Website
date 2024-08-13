@@ -1,0 +1,212 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --gradient :linear-gradient(90deg, #f1c40f, #f39c12);
+    --main-color:#ffa81c;
+    --red:#e74c3c;
+    --orange:#f39c12;
+    --light-color:#888;
+    --light-bg:#eee;
+    --black:#2c3e50;
+    --white:#fff;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color:#fff;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+   width: 1.5rem;
+   height: .5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+   background: var(--gradient);
+}
+
+/* 
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:linear-gradient(#f1c40f, #f39c12);
+} */
+
+body{
+   background-color: var(--light-bg);
+   /* padding-left: 30rem; */
+}
+
+body.dark{
+   --light-color:#aaa;
+   --light-bg:#333;
+   --black:#fff;
+   --white:#252525;
+   --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active{
+   padding-left: 0rem;
+}
+
+section{
+   min-width: 100%;
+}
+
+.heading{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2.5rem;
+   border-bottom: var(--border);
+   padding-bottom: 1.5rem;
+   text-transform: capitalize;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn{
+   border-radius: .5rem;
+   color:#fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   /* width: 100%; */
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color:var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+}
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+
+
+
+
+
+.account-form form{
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border: var(--border);
+    border-radius: .5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+ }
+ 
+ .account-form form h3{
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    text-align: center;
+ }
+ 
+ .account-form form p{
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--light-color);
+ }
+ 
+ .account-form form p span{
+    color: var(--red);
+ }
+ 
+ .account-form form .box{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    background-color: var(--light-bg);
+    margin: 1rem 0;
+ }
+ 
+ .account-form form textarea{
+    height: 15rem;
+    resize: none;
+ }
+ 
+ .account-form form .image{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-top: .5rem;
+ }
+ 
+ .account-form form .link{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--light-color);
+ }
+ 
+ .account-form form .link a{
+    color: var(--red);
+ }
+ 
+ .account-form form .link a:hover{
+    text-decoration: underline;
+ }
+ 
